@@ -1,8 +1,15 @@
-# Projects
+# Hi, I'm Rahul Khatri 👋
 
-A collection of full-stack and applied-AI projects. Every one is **public**,
-**Dockerized**, **runs offline with no API key** (real OpenAI/LLM calls are
-optional, with a heuristic/local fallback), and ships with **CI**.
+Full-stack engineer building **applied-AI products** — FastAPI / Django / Flask
+backends, React frontends, and LLM integrations (RAG, semantic search, prompt
+engineering). I care about clean APIs, well-tested code, and shipping things that
+actually run.
+
+Below are five end-to-end projects. Every one is **public**, **Dockerized**,
+**runs offline with no API key** (real OpenAI/LLM calls are optional, with
+heuristic/local fallbacks), and has **CI** with tests.
+
+## 🚀 Projects
 
 | Project | What it does | Stack | CI |
 | --- | --- | --- | --- |
@@ -12,9 +19,18 @@ optional, with a heuristic/local fallback), and ships with **CI**.
 | [📚 rag-book-chatbot](https://github.com/rahulkhatri922/rag-book-chatbot) | Local Retrieval-Augmented Generation chatbot over a library of book summaries; semantic search + cited answers. | LangChain (LCEL) · FAISS · Streamlit | [![CI](https://github.com/rahulkhatri922/rag-book-chatbot/actions/workflows/ci.yml/badge.svg)](https://github.com/rahulkhatri922/rag-book-chatbot/actions/workflows/ci.yml) |
 | [🧪 llm-prompt-testing-dashboard](https://github.com/rahulkhatri922/llm-prompt-testing-dashboard) | A/B test prompts across multiple language models and track hallucination rates over time. | Flask · PostgreSQL · React (Recharts) | [![CI](https://github.com/rahulkhatri922/llm-prompt-testing-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/rahulkhatri922/llm-prompt-testing-dashboard/actions/workflows/ci.yml) |
 
-### Common design
-- **Pluggable LLM providers** — real OpenAI (GPT-4 / ada-002) when a key is set, deterministic offline fallbacks (heuristics + local embeddings) otherwise, so everything runs and tests without credentials.
-- **`docker compose up`** brings up each full stack (backend + nginx-served React frontend + database where needed).
-- **Tested** — pytest suites with coverage gates (up to 100%) on the projects that ship one; the RAG project runs an offline ingest + retrieval smoke test in CI.
+## 🛠️ Tech
 
-_Each repo's own README covers setup, tests, environment variables, and its API reference._
+**Languages:** Python, JavaScript, SQL
+**Backend:** FastAPI · Django REST Framework · Flask · SQLAlchemy · PostgreSQL · SQLite
+**Frontend:** React · Vite · Recharts · Monaco
+**AI / ML:** OpenAI (GPT-4, embeddings) · LangChain · FAISS · RAG · prompt engineering · semantic search
+**DevOps:** Docker · docker-compose · nginx · GitHub Actions
+
+## What ties them together
+
+- **Pluggable LLM providers** — real OpenAI when a key is set, deterministic offline fallbacks (heuristics + local embeddings) otherwise, so everything runs and tests without credentials.
+- **`docker compose up`** brings up each full stack (backend + nginx-served React frontend + database where needed).
+- **Tested** — pytest suites with coverage gates up to 100% on the projects that ship one; the RAG project runs an offline ingest + retrieval smoke test in CI.
+
+<sub>All projects are MIT-licensed. Each repo's README covers setup, tests, env vars, and its API reference.</sub>
